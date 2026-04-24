@@ -18,24 +18,48 @@ document.addEventListener('DOMContentLoaded', () => {
     // Mobile Menu Toggle
     const mobileBtn = document.querySelector('.mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
+    const mobileBreakpoint = window.matchMedia('(max-width: 768px)');
+
+    const closeMobileMenu = () => {
+        if (!navLinks || !mobileBtn) {
+            return;
+        }
+
+        navLinks.classList.remove('nav-links--open');
+        mobileBtn.setAttribute('aria-expanded', 'false');
+    };
 
     if (mobileBtn) {
         mobileBtn.addEventListener('click', () => {
-            // Simple toggle for demo - in production normally toggle specific class
-            if (navLinks.style.display === 'flex') {
-                navLinks.style.display = 'none';
-            } else {
-                navLinks.style.display = 'flex';
-                navLinks.style.flexDirection = 'column';
-                navLinks.style.position = 'absolute';
-                navLinks.style.top = '100%';
-                navLinks.style.left = '0';
-                navLinks.style.width = '100%';
-                navLinks.style.background = '#FFFFFF';
-                navLinks.style.padding = '2rem';
-                navLinks.style.textAlign = 'center';
+            if (!navLinks) {
+                return;
             }
+
+            const isOpen = navLinks.classList.toggle('nav-links--open');
+            mobileBtn.setAttribute('aria-expanded', String(isOpen));
         });
+    }
+
+    if (navLinks) {
+        navLinks.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => {
+                if (mobileBreakpoint.matches) {
+                    closeMobileMenu();
+                }
+            });
+        });
+    }
+
+    const handleViewportChange = () => {
+        if (!mobileBreakpoint.matches) {
+            closeMobileMenu();
+        }
+    };
+
+    if (typeof mobileBreakpoint.addEventListener === 'function') {
+        mobileBreakpoint.addEventListener('change', handleViewportChange);
+    } else if (typeof mobileBreakpoint.addListener === 'function') {
+        mobileBreakpoint.addListener(handleViewportChange);
     }
 
     // Hero Slider
