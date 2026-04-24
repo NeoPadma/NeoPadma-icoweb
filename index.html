@@ -42,8 +42,7 @@
     <!-- Hero Section -->
     <header class="hero">
         <div class="hero-slider" aria-label="Hero image slider">
-            <div class="hero-panel hero-panel--active"
-                style="--hero-image: url('imgs/hero1.jpg'); --hero-position: center;">
+            <div class="hero-panel hero-panel--hero1 hero-panel--active">
                 <div class="container hero-panel__content hero-panel__content--center">
                     <span class="hero-subtitle">Quality. Precision. Trust.</span>
                     <h1 class="hero-title">Trusted Inspection and Integrity Services Across Asia</h1>
@@ -51,7 +50,7 @@
                         Asia-Pacific with dependable execution for critical oilfield operations.</p>
                 </div>
             </div>
-            <div class="hero-panel" style="--hero-image: url('imgs/hero2.jpg'); --hero-position: center;">
+            <div class="hero-panel hero-panel--hero2">
                 <div class="container hero-panel__content hero-panel__content--right">
                     <span class="hero-subtitle">Structured QMS. Technical Authority.</span>
                     <h1 class="hero-title">Quality Systems Built Around Compliance and Control</h1>
@@ -60,8 +59,7 @@
                         Level III experience.</p>
                 </div>
             </div>
-            <div class="hero-panel hero-panel--alternate"
-                style="--hero-image: url('imgs/hero3.jpg'); --hero-position: center;">
+            <div class="hero-panel hero-panel--hero3 hero-panel--alternate">
                 <div class="container hero-panel__content hero-panel__content--left">
                     <span class="hero-subtitle">Regional Reach. Operational Readiness.</span>
                     <h1 class="hero-title">Asia-Pacific Coverage with Skilled Teams Ready to Mobilize</h1>
@@ -176,8 +174,7 @@
                     <a href="#" class="service-link">Read More <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <!-- Service 6 (Image Tile) -->
-                <div class="service-card service-tile-interactive"
-                    style="background: url('imgs/services_more.png') no-repeat center center/cover;">
+                <div class="service-card service-tile-interactive service-tile-interactive--more">
                     <a href="#" class="service-link centered-big-link">Read More <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
@@ -185,23 +182,43 @@
     </section>
     <section class="section service-summary-section">
         <div class="service-summary-inner">
-            <div class="service-summary-column service-summary-column--dark">
-                <h2 class="section-title">Governance & Compliance</h2>
-                <p class="section-text">ICO operates a comprehensive Quality and Compliance program that continuously
-                    evaluates procedures and their
-                    implementation to ensure consistent and reliable service delivery across all operations. Supported
-                    by structured
-                    governance, technical oversight, and defined control mechanisms, this framework reinforces
-                    accountability, operational
-                    integrity, and continuous alignment with recognised industry standards.</p>
+            <div class="service-summary-column service-summary-column--primary">
+                <div class="service-summary-layout service-summary-layout--reverse">
+                    <h2 class="section-title service-summary-heading">Governance & Compliance</h2>
+                    <div class="service-summary-media">
+                        <img src="imgs/hero1.jpg" alt="Inspection operations supporting governance and compliance"
+                            class="service-summary-image">
+                    </div>
+                    <div class="service-summary-content">
+                        <p class="section-text">ICO operates a comprehensive Quality and Compliance program that
+                            continuously
+                            evaluates procedures and their
+                            implementation to ensure consistent and reliable service delivery across all operations.
+                            Supported
+                            by structured governance, technical oversight, and defined control mechanisms, this
+                            framework reinforces
+                            accountability, operational integrity, and continuous alignment with recognised industry
+                            standards.</p>
+                    </div>
+                </div>
             </div>
-            <div class="service-summary-column service-summary-column--muted">
-                <h2 class="section-title">Level III Technical Authority</h2>
-                <p class="section-text">ICO's Quality and Compliance program is supported by three Level III NDT
-                    specialists, the highest level of certification within the inspection hierarchy, strategically
-                    located across the region. With over 60+ years of combined experience, they provide technical
-                    governance over inspection procedures, personnel qualification, and methodologies, ensuring
-                    alignment with recognised industry standards and continuous audit readiness.</p>
+            <div class="service-summary-column service-summary-column--secondary">
+                <div class="service-summary-layout">
+                    <h2 class="section-title service-summary-heading">Level III Technical Authority</h2>
+                    <div class="service-summary-content">
+                        <p class="section-text">ICO’s Quality and Compliance program is strengthened by three Level III
+                            NDT specialists, the highest certification in
+                            inspection, strategically positioned across the region. With over 60 years of combined
+                            expertise, they oversee inspection
+                            procedures, personnel qualifications, and methodologies, ensuring technical governance,
+                            adherence to recognised industry
+                            standards, and continuous audit readiness across all operations.</p>
+                    </div>
+                    <div class="service-summary-media">
+                        <img src="imgs/hero2.jpg" alt="Level III technical authority and inspection leadership"
+                            class="service-summary-image">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -258,21 +275,54 @@
             <!-- Column 1: Certified Excellence -->
             <div class="trust-col" id="compliance">
                 <h2 class="section-title">Certified Excellence</h2>
-                <div class="cert-grid-compact">
-                    <div class="cert-logo-box-sm" title="ISO 9001">
-                        <img src="imgs/iso_9001.png" alt="ISO 9001 logo" class="cert-logo-image">
+                <div class="cert-banner">
+                    <div class="cert-track">
+                        <div class="cert-card">
+                            <img src="imgs/iso_9001.png" alt="ISO 9001 logo" class="cert-card-logo">
+                            <span class="cert-card-text">Quality Management Systems</span>
+                        </div>
+                        <div class="cert-card">
+                            <img src="imgs/iso_29001.png" alt="ISO 29001 logo" class="cert-card-logo">
+                            <span class="cert-card-text">Quality Management Systems for the petroleum, petrochemical &
+                                natural gas industries</span>
+                        </div>
+                        <div class="cert-card">
+                            <img src="imgs/iso_17020.png" alt="ISO IEC 17020 logo" class="cert-card-logo">
+                            <span class="cert-card-text">Conformity assessment for inspection bodies</span>
+                        </div>
+                        <div class="cert-card">
+                            <img src="imgs/iso_17025.png" alt="ISO IEC 17025 logo" class="cert-card-logo">
+                            <span class="cert-card-text">Testing and calibration laboratories</span>
+                        </div>
+                        <div class="cert-card">
+                            <img src="imgs/LEEA.png" alt="LEEA logo" class="cert-card-logo">
+                            <span class="cert-card-text">LEEA - Lifting equipment inspection and certification</span>
+                        </div>
                     </div>
-                    <div class="cert-logo-box-sm" title="ISO 29001">
-                        <img src="imgs/iso_29001.png" alt="ISO 29001 logo" class="cert-logo-image">
-                    </div>
-                    <div class="cert-logo-box-sm" title="ISO 17020">
-                        <img src="imgs/iso_17020.png" alt="ISO 17020 logo" class="cert-logo-image">
-                    </div>
-                    <div class="cert-logo-box-sm" title="ISO 17025">
-                        <img src="imgs/iso_17025.png" alt="ISO 17025 logo" class="cert-logo-image">
-                    </div>
-                    <div class="cert-logo-box-sm" title="LEEA">
-                        <img src="imgs/LEEA.png" alt="LEEA logo" class="cert-logo-image">
+                    <div class="cert-track" aria-hidden="true">
+                        <div class="cert-card">
+                            <img src="imgs/iso_9001.png" alt="" class="cert-card-logo">
+                            <span class="cert-card-text">ISO 9001:2015 - Quality Management Systems</span>
+                        </div>
+                        <div class="cert-card">
+                            <img src="imgs/iso_29001.png" alt="" class="cert-card-logo">
+                            <span class="cert-card-text">ISO 29001:2020 - Quality Management Systems for the petroleum,
+                                petrochemical & natural gas industries</span>
+                        </div>
+                        <div class="cert-card">
+                            <img src="imgs/iso_17020.png" alt="" class="cert-card-logo">
+                            <span class="cert-card-text">ISO/IEC 17020:2012 - Conformity assessment for inspection
+                                bodies</span>
+                        </div>
+                        <div class="cert-card">
+                            <img src="imgs/iso_17025.png" alt="" class="cert-card-logo">
+                            <span class="cert-card-text">ISO/IEC 17025:2017 - Testing and calibration
+                                laboratories</span>
+                        </div>
+                        <div class="cert-card">
+                            <img src="imgs/LEEA.png" alt="" class="cert-card-logo">
+                            <span class="cert-card-text">LEEA - Lifting equipment inspection and certification</span>
+                        </div>
                     </div>
                 </div>
                 <a href="#" class="trust-more-link">More About Our Qyuality & Compliance <i
